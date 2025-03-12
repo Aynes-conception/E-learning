@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aynes E-Conception | Spécialiste Formation Logiciels Métier pour PME et Organisations</title>
+  <style>
+    :root {
+      --primary: #2D7DD2;
+      --secondary: #4A4A4A;
+      --accent: #FF6B35;
+      --light: #F5F5F5;
+      --dark: #333333;
+      --success: #97D8B2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: #FAFAFA;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #FDFDFD 0%, #F3F3F3 100%);
+      padding: 30px 0;
+      border-bottom: 1px solid #EFEFEF;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: var(--secondary);
+      font-weight: 400;
+    }
+
+    .contact-btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: #E55A24;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(229, 90, 36, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F9F9F9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: var(--secondary);
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+
+    .hero-cta:hover {
+      background-color: #E55A24;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(229, 90, 36, 0.3);
+    }
+
+    /* Problem Solution Section */
+    .problem-solution {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      font-size: 18px;
+      color: var(--secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .stat-box {
+      text-align: center;
+      background-color: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin: 15px;
+      flex: 1;
+      min-width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .stat-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .stat-value {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 18px;
+      color: var(--secondary);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 80px 0;
+      background-color: #F9F9F9;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      flex: 1;
+      min-width: 300px;
+      max-width: 350px;
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card-header {
+      background-color: var(--dark);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .service-card-header h3 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .service-card-price {
+      background-color: rgba(255, 107, 53, 0.1);
+      color: var(--accent);
+      padding: 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .service-card-body {
+      padding: 30px;
+    }
+
+    .service-feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .service-icon {
+      color: var(--accent);
+      font-size: 20px;
+      margin-right: 15px;
+      min-width: 24px;
+      padding: 2px;
+    }
+
+    .service-feature-text h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .service-feature-text p {
+      font-size: 15px;
+      color: var(--secondary);
+    }
+
+    .service-card-footer {
+      background-color: #F5F5F5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-benefit {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Why Choose Section */
+    .why-choose {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
+
+    .feature-box {
+      flex: 1;
+      min-width: 250px;
+      max-width: 500px;
+      margin: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .feature-icon {
+      background-color: rgba(45, 125, 210, 0.1);
+      color: var(--primary);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 20px;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 107, 53, 0.3);
+    }
+
+    .feature-icon i {
+      font-size: 24px;
+    }
+
+    .feature-content h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    .feature-content p {
+      font-size: 16px;
+      color: var(--secondary);
+    }
+
+    /* Target Section */
+    .target-section {
+      padding: 80px 0;
+      background-color: #F9F9F9;
+    }
+
+    .target-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .target-column {
+      flex: 1;
+      min-width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .target-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .target-list {
+      list-style: none;
+    }
+
+    .target-item {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .target-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background-color: var(--accent);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    /* Results Section */
+    .results-section {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .results-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .result-box {
+      flex: 1;
+      min-width: 300px;
+      background-color: var(--light);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .result-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    .result-content {
+      font-size: 16px;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+
+    .result-number {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 15px 0;
+    }
+
+    .result-context {
+      font-size: 15px;
+      color: var(--secondary);
+      font-style: italic;
+    }
+
+    /* Testimonial Section */
+    .testimonials {
+      padding: 80px 0;
+      background-color: #F9F9F9;
+      position: relative;
+    }
+
+    .testimonial-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .testimonial-container::before {
+      content: "\201C";
+      font-family: Georgia, serif;
+      font-size: 120px;
+      position: absolute;
+      color: rgba(45, 125, 210, 0.1);
+      top: -20px;
+      left: 20px;
+    }
+
+    .testimonial-content {
+      font-size: 18px;
+      color: var(--secondary);
+      line-height: 1.8;
+      margin-bottom: 30px;
+      padding-left: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+    }
+
+    .author-info {
+      margin-left: 15px;
+    }
+
+    .author-name {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--dark);
+      margin-bottom: 5px;
+    }
+
+    .author-position {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .testimonial-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background-color: #F9F9F9;
+      text-align: center;
+    }
+
+    .cta-container {
+      background-color: white;
+      border-radius: 15px;
+      padding: 60px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-container h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--dark);
+    }
+
+    .cta-container p {
+      font-size: 18px;
+      color: var(--secondary);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s;
+    }
+
+    .primary-btn:hover {
+      background-color: #E55A24;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(229, 90, 36, 0.3);
+    }
+
+    .secondary-btn {
+      background-color: white;
+      color: var(--primary);
+      padding: 14px 34px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s;
+      border: 2px solid var(--primary);
+    }
+
+    .secondary-btn:hover {
+      background-color: rgba(255, 107, 53, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Mini Case Studies */
+    .case-studies {
+      padding: 80px 0;
+      background-color: white;
+    }
+
+    .case-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .case-card {
+      flex: 1;
+      min-width: 300px;
+      background-color: var(--light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .case-header {
+      background-color: var(--dark);
+      color: white;
+      padding: 15px 20px;
+      font-weight: 600;
+    }
+
+    .case-body {
+      padding: 20px;
+    }
+
+    .case-challenge {
+      margin-bottom: 15px;
+    }
+
+    .case-challenge h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 5px;
+    }
+
+    .case-solution {
+      margin-bottom: 15px;
+    }
+
+    .case-solution h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .case-result {
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 50px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .footer-logo h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      font-size: 15px;
+      color: #BBB;
+      max-width: 300px;
+    }
+
+    .footer-contact {
+      flex: 1;
+      min-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .footer-contact h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: var(--primary);
+    }
+
+    .contact-info a {
+      color: #BBB;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: white;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid #444;
+      margin-top: 30px;
+      color: #BBB;
+      font-size: 14px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .service-card {
+        min-width: 100%;
+      }
+
+      .cta-container {
+        padding: 40px 20px;
+      }
+
+      .testimonial-container {
+        padding: 30px 20px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-logo p {
+        max-width: 100%;
+      }
+
+      .contact-info {
+        justify-content: center;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">Aynes <span>E-Conception</span></div>
+      <a href="#contact" class="contact-btn">Contactez-nous</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Attention) -->
+  <section class="hero">
+    <div class="container">
+      <h1>Spécialiste formation aux <span>logiciels métier</span> pour PME et organisations spécialisées</h1>
+      <p>Accélérez l'adoption de vos outils, réduisez les coûts de support et optimisez l'onboarding grâce à des formations e-learning adaptées à vos enjeux spécifiques</p>
+      <a href="#contact" class="hero-cta">Discutons de votre projet</a>
+    </div>
+  </section>
+
+  <!-- Problem Solution Section (Interest) -->
+  <section class="problem-solution">
+    <div class="container">
+      <div class="section-heading">
+        <h2>L'implémentation des logiciels métier échoue sans formation adaptée</h2>
+        <p>70% des projets d'implémentation de logiciels métier n'atteignent pas leurs objectifs par manque de formation appropriée des utilisateurs. Notre approche change la donne.</p>
+      </div>
+
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-value">70%</div>
+          <div class="stat-label">D'engagement en plus avec nos modules interactifs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">45%</div>
+          <div class="stat-label">De réduction du temps d'onboarding</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">60%</div>
+          <div class="stat-label">De diminution des tickets support après formation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (Desire) -->
+  <section class="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Nos solutions de formation</h2>
+        <p>Des offres adaptées aux besoins spécifiques des PME et organisations spécialisées.</p>
+      </div>
+
+      <div class="services-container">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <h3>Formation Logiciels Métier</h3>
+          </div>
+          <div class="service-card-price">
+            À partir de 3 000€
+          </div>
+          <div class="service-card-body">
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Modules personnalisés</h4>
+                <p>Formation sur-mesure pour vos logiciels spécifiques (SIRH, CRM, ERP...)</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Scénarios d'usage réels</h4>
+                <p>Simulations basées sur des cas concrets de votre entreprise</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Suivi et mesure de progression</h4>
+                <p>Tableaux de bord pour suivre l'adoption des utilisateurs</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-footer">
+            <p class="service-benefit">Bénéfice : Adoption maximale et ROI accéléré de vos investissements logiciels</p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <h3>Onboarding Digital PME</h3>
+          </div>
+          <div class="service-card-price">
+            À partir de 4 500€
+          </div>
+          <div class="service-card-body">
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Parcours d'intégration complet</h4>
+                <p>Intégration des nouveaux collaborateurs rapide et efficace</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Kit numérique d'entreprise</h4>
+                <p>Formation à votre écosystème d'outils et aux process internes</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-exchange-alt"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Gestion du changement</h4>
+                <p>Accompagnement lors des transitions numériques et changements d'outils</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-footer">
+            <p class="service-benefit">Bénéfice : Montée en compétences rapide et réduction du turnover</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <h3>Formation Secteurs Spécialisés</h3>
+          </div>
+          <div class="service-card-price">
+            Sur mesure
+          </div>
+          <div class="service-card-body">
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-sitemap"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Expertise sectorielle</h4>
+                <p>Modules adaptés aux spécificités RH, MJPM/tutelles, ESS, santé</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Conformité réglementaire</h4>
+                <p>Formation intégrant les exigences légales de votre secteur</p>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-icon">
+                <i class="fas fa-handshake"></i>
+              </div>
+              <div class="service-feature-text">
+                <h4>Adaptation ESUS/Impact</h4>
+                <p>Approche spécifique pour organisations à mission sociale</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card-footer">
+            <p class="service-benefit">Bénéfice : Formation parfaitement alignée avec vos enjeux métier spécifiques</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="case-studies">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Notre expertise en action</h2>
+        <p>Découvrez comment nous appliquons nos compétences pour répondre aux défis spécifiques de nos clients.</p>
+      </div>
+
+      <div class="case-container">
+        <div class="case-card">
+          <div class="case-header">Expertise Logiciels RH</div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Notre démarche</h4>
+              <p>Création de modules de formation contextualisés qui intègrent les workflows spécifiques et les cas d'usage quotidiens des équipes RH.</p>
+            </div>
+            <div class="case-result">
+              <p>Compétences clés : Connaissance des SIRH, compréhension des processus RH, capacité à traduire les fonctionnalités techniques en bénéfices métier.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-header">Expertise Secteur MJPM/Tutelles</div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Notre démarche</h4>
+              <p>Développement de parcours de formation respectant les exigences réglementaires et sécurisant les pratiques professionnelles des mandataires judiciaires.</p>
+            </div>
+            <div class="case-result">
+              <p>Compétences clés : Maîtrise du cadre légal des tutelles, connaissance des logiciels spécialisés du secteur, expertise Qualiopi pour la certification des formations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-header">Expertise Onboarding Digital</div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Notre démarche</h4>
+              <p>Conception de parcours d'intégration structurés qui combinent formation aux outils, compréhension des processus et intégration à la culture d'entreprise.</p>
+            </div>
+            <div class="case-result">
+              <p>Compétences clés : Ingénierie pédagogique, scénarisation de parcours, capacité à digitaliser les processus RH, maîtrise des outils d'e-learning interactifs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Section -->
+  <section class="target-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Pour qui travaillons-nous ?</h2>
+        <p>Notre méthodologie s'adapte à une variété d'organisations tout en conservant notre expertise sectorielle.</p>
+      </div>
+
+      <div class="target-columns">
+        <div class="target-column">
+          <h3 class="target-title">PME en développement</h3>
+          <ul class="target-list">
+            <li class="target-item">Entreprises de 20 à 250 salariés</li>
+            <li class="target-item">Structures en digitalisation de leurs processus</li>
+            <li class="target-item">Organisations implémentant de nouveaux logiciels</li>
+            <li class="target-item">PME sans service formation interne dédié</li>
+            <li class="target-item">Entreprises avec équipes multi-sites</li>
+          </ul>
+        </div>
+
+        <div class="target-column">
+          <h3 class="target-title">Acteurs spécialisés</h3>
+          <ul class="target-list">
+            <li class="target-item">Éditeurs de logiciels RH et solutions métier</li>
+            <li class="target-item">Structures MJPM et services de tutelles</li>
+            <li class="target-item">Entreprises ESUS et organisations à impact</li>
+            <li class="target-item">Organismes de formation professionnelle</li>
+            <li class="target-item">Prestataires en transformation digitale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Pourquoi choisir Aynes E-Conception ?</h2>
+        <p>Notre approche unique combine expertise technique et vision pédagogique pour créer des formations efficaces et adaptées à vos enjeux spécifiques.</p>
+      </div>
+
+      <div class="features-container">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Double expertise technique et pédagogique</h3>
+            <p>Nous comprenons à la fois les logiciels et les mécanismes d'apprentissage pour créer des formations vraiment efficaces.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Méthodologie adaptable et éprouvée</h3>
+            <p>Notre processus de création de formation s'adapte à différents secteurs tout en garantissant des résultats concrets.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Connaissance sectorielle approfondie</h3>
+            <p>Notre expertise dans les domaines RH, MJPM et ESS nous permet de comprendre les enjeux spécifiques de ces secteurs.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="feature-content">
+            <h3>Accompagnement Qualiopi</h3>
+            <p>Notre expérience dans la certification garantit le respect des standards qualité pour les organismes de formation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results Section -->
+  <section class="results-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Objectifs de performance pour votre formation</h2>
+        <p>Voici les résultats que nous visons à travers nos solutions d'apprentissage personnalisées.</p>
+      </div>
+
+      <div class="results-container">
+        <div class="result-box">
+          <div class="result-title">Adoption des logiciels</div>
+          <p class="result-content">Notre objectif pour l'utilisation active des fonctionnalités clés</p>
+          <div class="result-number">+85%</div>
+          <p class="result-context">Contre 45% en moyenne avec les méthodes traditionnelles</p>
+        </div>
+        
+        <div class="result-box">
+          <div class="result-title">Réduction des sollicitations support</div>
+          <p class="result-content">Diminution visée des tickets d'assistance technique</p>
+          <div class="result-number">-60%</div>
+          <p class="result-context">Pour des économies significatives en temps et en ressources</p>
+        </div>
+        
+        <div class="result-box">
+          <div class="result-title">Temps d'onboarding</div>
+          <p class="result-content">Accélération potentielle de la prise en main</p>
+          <div class="result-number">-45%</div>
+          <p class="result-context">Pour une productivité plus rapide des équipes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Témoignage Client</h2>
+        <p>Découvrez ce que nos clients disent de notre collaboration</p>
+      </div>
+
+      <div class="testimonial-container">
+        <p class="testimonial-content">Lucie a été un atout au sein de Tutelle au Quotidien. Son expertise en formation, sa capacité à structurer des contenus pédagogiques et à traiter des sujets complexes ont été très appréciées. Elle a notamment contribué à la création de tutoriels vidéo, à la mise en place du référentiel Qualiopi et a efficacement géré des projets clés. Elle est très pro, dynamique, rigoureuse et engagée. C'est une collaboratrice de confiance que je recommande.</p>
+
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="author-info">
+            <div class="author-name">Guillaume Babulle</div>
+            <div class="author-position">TUTELLE AU QUOTIDIEN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-container">
+        <h2>Prêt à optimiser l'adoption de vos logiciels métier ?</h2>
+        <p>Discutons ensemble de votre projet de formation et créons une solution sur-mesure adaptée à vos enjeux spécifiques.</p>
+        <div class="cta-buttons">
+          <a href="tel:0634173008" class="primary-btn"><i class="fas fa-phone-alt"></i> 06.34.17.30.08</a>
+          <a href="mailto:aynes.e.conception@gmail.com" class="secondary-btn"><i class="fas fa-envelope"></i> Envoyez un email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>Aynes E-Conception</h3>
+          <p>Spécialiste de la formation aux logiciels métier pour PME et organisations spécialisées. Nous transformons vos outils en leviers de performance grâce à des formations e-learning adaptées.</p>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <div class="contact-info">
+            <i class="fas fa-user"></i>
+            <span>Lucie Aynes</span>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:0634173008">06.34.17.30.08</a>
+          </div>
+          <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:aynes.e.conception@gmail.com">aynes.e.conception@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2025 Aynes E-Conception. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
